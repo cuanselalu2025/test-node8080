@@ -1,6 +1,8 @@
-image:
-    file: .gitpod.Dockerfile
-  
-  tasks:
-    - command: php -v
-  
+FROM gitpod/workspace-full
+
+USER root
+
+RUN apt-get update && \
+    apt-get install -y php
+
+USER gitpod

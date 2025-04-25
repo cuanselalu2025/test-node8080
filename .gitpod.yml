@@ -1,9 +1,5 @@
-image: node:18
+image:
+  file: .gitpod.Dockerfile
 
 tasks:
-  - init: npm install express
-    command: node index.js
-
-ports:
-  - port: 8080
-    onOpen: open-preview
+  - command: php -v
